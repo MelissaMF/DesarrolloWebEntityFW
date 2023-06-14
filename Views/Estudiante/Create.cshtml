@@ -1,0 +1,16 @@
+﻿@model Estudiante
+@using(Html.BeginForm("Save", "Estudiante", FormMethod.Post))
+{
+	@Html.LabelFor(l => l.Nombre)
+	@Html.TextBoxFor(m => m.Nombre)
+	@Html.LabelFor(l => l.ApellidoPaterno)
+	@Html.TextBoxFor(m => m.ApellidoPaterno)
+	@Html.LabelFor(l => l.ApellidoMaterno)
+	@Html.TextBoxFor(m => m.ApellidoMaterno)
+	@Html.LabelFor(l => l.Direccion.Ciudad)
+	@Html.TextBoxFor(m => m.Direccion.Ciudad)
+	@Html.LabelFor(l => l.Direccion.NumeroCasa)
+	@Html.TextBoxFor(m => m.Direccion.NumeroCasa)
+	@Html.ValidationSummary()
+	<button class="btn btn-primary" type="submit">Enviar</button>
+}
